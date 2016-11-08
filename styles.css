@@ -25,3 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.bouncyDancer{
+  border:10px solid yellow;
+  border-radius:10px;
+  position:absolute;
+}
