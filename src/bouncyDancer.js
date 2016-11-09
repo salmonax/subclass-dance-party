@@ -1,6 +1,6 @@
 var BouncyDancer = function() {
   Dancer.call(this);
-  this.$node = $('<span class="bouncyDancer"></span>');
+  this.$node = $('<img class="bouncyDancer" src="img/stan.gif">');
   this.$parent = null;
   this.maxX = null;
   this.maxY = null;
@@ -20,9 +20,9 @@ BouncyDancer.prototype.step = function (timeBetweenSteps) {
 BouncyDancer.prototype._move = function() {
   this.hasParent = this.hasParent || this.$node.parent().length;
   if (this.hasParent) {
-    this.$parent = this.$parent || $(this.$node.parent());
-    this.maxY = this.maxY || this.$parent.height(); 
-    this.maxX = this.maxX || this.$parent.width();
+    this.$parent = $(this.$node.parent());
+    this.maxY = this.$parent.height();
+    this.maxX = this.$parent.width();
     var top = parseInt(this.$node.css('top'));
     var left = parseInt(this.$node.css('left'));
     if (top === this.maxY) { 
@@ -35,8 +35,6 @@ BouncyDancer.prototype._move = function() {
     } else if (left === 0) {
       this.xDirection = 1;
     }
-
-
     top += this.yDirection;
     left += this.xDirection;
     var styleSettings = {

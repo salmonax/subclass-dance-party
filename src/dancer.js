@@ -4,9 +4,8 @@ var Dancer = function() {
   this.$node = $('<span class="dancer"></span>');
 };
 
-Dancer.prototype.step = function(top, left, timeBetweenSteps) {
-  setTimeout(this.step.bind(this), timeBetweenSteps);
-
+Dancer.prototype.step = function(timeBetweenSteps) {
+  setTimeout(this.step.bind(this, timeBetweenSteps), timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {

@@ -27,7 +27,12 @@ body, a:link, a:visited, a:active{
 }
 
 .bouncyDancer{
-  border:10px solid yellow;
-  border-radius:10px;
+  /*border:10px solid yellow;*/
+  /*border-radius:10px;*/
+  
+  background-image: url("img/stan.gif");
+  /*-webkit-transform: scale(0.5);*/
+  transform: scale(0.10);
+  transform-origin: 0% 0%;
   position:absolute;
 }
